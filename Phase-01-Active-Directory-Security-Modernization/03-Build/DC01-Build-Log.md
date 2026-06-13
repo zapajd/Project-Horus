@@ -28,7 +28,7 @@ The purpose is to provide a repeatable deployment record and demonstrate operati
 | ---------------- | ---------------------------- |
 | Hostname         | DC01                         |
 | Role             | Domain Controller            |
-| Operating System | Windows Server 2022 Standard |
+| Operating System | Windows Server 2022 Standard Evaluation (Desktop Experience) |
 | Domain           | corp.horustech.local         |
 | IP Address       | TBD                          |
 | Deployment Date  | TBD                          |
@@ -39,8 +39,8 @@ The purpose is to provide a repeatable deployment record and demonstrate operati
 
 | Step                         | Status      |
 | ---------------------------- | ----------- |
-| Create VM                    | Pending     |
-| Install Windows Server       | Pending     |
+| Create VM                    | Completed   |
+| Install Windows Server       | Completed   |
 | Configure Networking         | Pending     |
 | Rename Server                | Pending     |
 | Install Updates              | Pending     |
@@ -65,12 +65,18 @@ Deploy the Windows Server virtual machine that will become DC01.
 
 | Setting    | Value |
 | ---------- | ----- |
-| VM Name    | DC01  |
-| Generation | TBD   |
-| CPU        | TBD   |
-| RAM        | TBD   |
-| Storage    | TBD   |
-| Network    | TBD   |
+| VM Name    | Horus-DC-01  |
+| Generation | VMW Workstation 25H2 or later   |
+| CPU        | 2 Cores   |
+| RAM        | 4096 MB   |
+| Storage    | 80 GB   |
+| Network    | VMnet10  |
+
+---
+
+## Screenshot
+
+![VM Creation](Screenshots/01-VM-Creation.png)
 
 ---
 
@@ -81,9 +87,7 @@ Deploy the Windows Server virtual machine that will become DC01.
 
 Status:
 
-```text
-Pending
-```
+```Completed```
 
 ---
 
@@ -97,20 +101,26 @@ Install Windows Server 2022 Standard.
 
 ## Actions Performed
 
-*To be completed during deployment.*
+* Mounted Windows Server 2022 installation ISO.
+* Booted virtual machine from ISO media.
+* Selected Windows Server 2022 Standard Evaluation (Desktop Experience).
+* Started operating system installation.
+---
+
+## Screenshot
+
+![Windows Installation](Screenshots/02-Windows-Installation.png)
 
 ---
 
 ## Validation
 
 * Installation completed successfully
-* Administrator login successful
+* Administrator account creation screen displayed
 
 Status:
 
-```text
-Pending
-```
+```Completed```
 
 ---
 
