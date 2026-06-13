@@ -76,7 +76,13 @@ Deploy the Windows Server virtual machine that will become DC01.
 
 ## Screenshot
 
-![VM Creation](Screenshots/01-VM-Creation.png)
+<p align="center">
+  <img src="Screenshots/01-VM-Creation.png" width="500">
+</p>
+
+<p align="center">
+  <em>Figure 1: DC01 virtual machine configuration prior to deployment.</em>
+</p>
 
 ---
 
@@ -109,7 +115,13 @@ Install Windows Server 2022 Standard.
 
 ## Screenshot
 
-![Windows Installation](Screenshots/02-Windows-Installation.png)
+<p align="center">
+  <img src="Screenshots/02-Windows-Installation.png" width="650">
+</p>
+
+<p align="center">
+  <em>Figure 2: Windows Server 2022 Standard Evaluation (Desktop Experience) installation.</em>
+</p>
 
 ---
 
