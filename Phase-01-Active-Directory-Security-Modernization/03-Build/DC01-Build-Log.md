@@ -30,8 +30,8 @@ The purpose is to provide a repeatable deployment record and demonstrate operati
 | Role             | Domain Controller            |
 | Operating System | Windows Server 2022 Standard Evaluation (Desktop Experience) |
 | Domain           | corp.horustech.local         |
-| IP Address       | TBD                          |
-| Deployment Date  | TBD                          |
+| IP Address       | 192.168.10.10                |
+| Deployment Date  | 2026-06-14                   |
 
 ---
 
@@ -41,7 +41,7 @@ The purpose is to provide a repeatable deployment record and demonstrate operati
 | ---------------------------- | ----------- |
 | Create VM                    | Completed   |
 | Install Windows Server       | Completed   |
-| Configure Networking         | Pending     |
+| Configure Networking         | Completed   |
 | Rename Server                | Pending     |
 | Install Updates              | Pending     |
 | Install AD DS                | Pending     |
@@ -148,13 +148,24 @@ Configure static networking for DC01.
 
 | Setting       | Value         |
 | ------------- | ------------- |
-| IP Address    | 10.0.0.10     |
+| IP Address    | 192.168.10.10 |
 | Subnet Mask   | 255.255.255.0 |
-| Gateway       | 10.0.0.1      |
-| Preferred DNS | 10.0.0.10     |
+| Gateway       | N/A (Host-Only) |
+| Preferred DNS | 192.168.10.10 |
 
 ---
 
+## Screenshot
+
+<p align="center">
+  <img src="Screenshots/08-Static-IP-Configuration.png" width="500">
+</p>
+
+<p align="center">
+  <em>Figure 8: Static IPv4 configuration assigned to DC01 prior to Active Directory deployment.</em>
+</p>
+
+---
 ## Validation
 
 * Successful ping test
