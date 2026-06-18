@@ -188,12 +188,21 @@ Rename the server according to Project Horus naming standards.
 
 ## Target Name
 
-```text
-DC01
-```
+```DC01```
 
 ---
 
+## Screenshot
+
+<p align="center">
+  <img src="Screenshots/07-Computer-Rename.png" width="600">
+</p>
+
+<p align="center">
+  <em>Figure 7: Computer name change completed. Restart hasn't been done at this point, therefore name change won't reflect until system restart.</em>
+</p>
+
+---
 ## Validation
 
 * Hostname updated successfully changed from default serveer name to DC01
@@ -211,6 +220,18 @@ Status:
 ## Objective
 
 Apply latest Windows updates prior to domain promotion.
+
+---
+## Screenshot
+
+<p align="center">
+  <img src="Screenshots/09-Windows-Updates.png" width="500">
+</p>
+
+<p align="center">
+  <em>Figure 9: Windows updates prior and after installation.</em>
+</p>
+
 
 ---
 
@@ -242,6 +263,18 @@ Install required Active Directory services.
 
 ---
 
+## Screenshot
+
+<p align="center">
+  <img src="Screenshots/10-ADDS-DNS-Installation.png" width="600">
+</p>
+
+<p align="center">
+  <em>Figure 10: AD DS and DNS Server installation.</em>
+</p>
+
+---
+
 ## Validation
 
 * AD DS role installed successfully
@@ -260,6 +293,18 @@ Status:
 ## Objective
 
 Create the Horus Technologies Active Directory forest.
+
+---
+
+## Screenshot
+
+<p align="center">
+  <img src="Screenshots/11-Domain-Deployment-Configuration.png" width="600">
+</p>
+
+<p align="center">
+  <em>Figure 11: Server promotion and new forest creation.</em>
+</p>
 
 ---
 
