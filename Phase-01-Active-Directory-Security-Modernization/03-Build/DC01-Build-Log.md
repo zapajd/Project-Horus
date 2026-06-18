@@ -162,7 +162,7 @@ Configure static networking for DC01.
 </p>
 
 <p align="center">
-  <em>Figure 8: Static IPv4 configuration assigned to DC01 prior to Active Directory deployment.</em>
+  <em>Figure 3: Static IPv4 configuration assigned to DC01 prior to Active Directory deployment.</em>
 </p>
 
 ---
@@ -199,7 +199,7 @@ Rename the server according to Project Horus naming standards.
 </p>
 
 <p align="center">
-  <em>Figure 7: Computer name change completed. Restart hasn't been done at this point, therefore name change won't reflect until system restart.</em>
+  <em>Figure 4: Computer name change completed. Restart hasn't been done at this point, therefore name change won't reflect until system restart.</em>
 </p>
 
 ---
@@ -222,6 +222,7 @@ Status:
 Apply latest Windows updates prior to domain promotion.
 
 ---
+
 ## Screenshot
 
 <p align="center">
@@ -229,7 +230,7 @@ Apply latest Windows updates prior to domain promotion.
 </p>
 
 <p align="center">
-  <em>Figure 9: Windows updates prior and after installation.</em>
+  <em>Figure 5: Windows updates prior and after installation.</em>
 </p>
 
 
@@ -270,7 +271,7 @@ Install required Active Directory services.
 </p>
 
 <p align="center">
-  <em>Figure 10: AD DS and DNS Server installation.</em>
+  <em>Figure 6: AD DS and DNS Server installation.</em>
 </p>
 
 ---
@@ -296,6 +297,12 @@ Create the Horus Technologies Active Directory forest.
 
 ---
 
+## Forest
+
+```corp.horustech.local```
+
+---
+
 ## Screenshot
 
 <p align="center">
@@ -303,14 +310,11 @@ Create the Horus Technologies Active Directory forest.
 </p>
 
 <p align="center">
-  <em>Figure 11: Server promotion and new forest creation.</em>
+  <em>Figure 7: Figure 11: Server promotion and new forest creation.
+
+</em>
 </p>
 
----
-
-## Forest
-
-```corp.horustech.local```
 
 ---
 
