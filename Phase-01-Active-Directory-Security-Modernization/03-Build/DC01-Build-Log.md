@@ -174,9 +174,7 @@ Configure static networking for DC01.
 
 Status:
 
-```text
-Pending
-```
+```Completed```
 
 ---
 
@@ -198,14 +196,13 @@ DC01
 
 ## Validation
 
-* Hostname updated successfully
+* Hostname updated successfully changed from default serveer name to DC01
 * Reboot completed successfully
+* New hostname verified after login
 
 Status:
 
-```text
-Pending
-```
+```Completed```
 
 ---
 
@@ -219,14 +216,14 @@ Apply latest Windows updates prior to domain promotion.
 
 ## Validation
 
-* No critical updates missing
+* Windows Update executed successfully
+* Latest available updates installed
 * Reboot completed successfully
+* System reported "You're up to date"
 
 Status:
 
-```text
-Pending
-```
+```Completed```
 
 ---
 
@@ -247,14 +244,14 @@ Install required Active Directory services.
 
 ## Validation
 
-* Roles installed successfully
-* No installation errors
+* AD DS role installed successfully
+* DNS Server role installed successfully
+* Installation wizard completed without errors
+* Server Manager displayed successful installation status
 
 Status:
 
-```text
-Pending
-```
+```Completed```
 
 ---
 
@@ -268,9 +265,7 @@ Create the Horus Technologies Active Directory forest.
 
 ## Forest
 
-```text
-corp.horustech.local
-```
+```corp.horustech.local```
 
 ---
 
@@ -282,9 +277,7 @@ corp.horustech.local
 
 Status:
 
-```text
-Pending
-```
+```Completed```
 
 ---
 
@@ -344,21 +337,31 @@ Document deployment issues, troubleshooting steps, and resolutions.
 
 | Issue | Resolution |
 | ----- | ---------- |
+| DNS delegation warning during domain promotion  | Expected behavior in isolated lab environment. No action required. |
 | None  | N/A        |
-
 ---
 
 # Lessons Learned
 
 Document observations and recommendations for future deployments.
 
+* Configure static networking installing Active Directories before installing Active Directory services.
+* Verify hostname and Windows updates prior to domaion promotion.
+* DNS delegation warnings are common in standalone lab deplouments and do not prvent successful promotion.
+* Capturing screenshots during each deployment phase simplifies documentation and porfolio development.
+
 ---
 
 # Build Completion Status
 
-```text
-Not Started
-```
+```85% Complete```
+
+Remaining Activities:
+
+* Validate SYSVOL and NETLOGON shares
+* Validate DNS records
+* Join workstation(s) to domain
+* Continue with security hardening and GPO deployment
 
 ---
 
@@ -370,4 +373,4 @@ Project Horus Team
 
 # Last Updated
 
-TBD
+2026-06-17
