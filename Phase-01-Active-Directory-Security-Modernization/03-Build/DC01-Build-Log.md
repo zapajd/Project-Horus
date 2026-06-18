@@ -42,11 +42,11 @@ The purpose is to provide a repeatable deployment record and demonstrate operati
 | Create VM                    | Completed   |
 | Install Windows Server       | Completed   |
 | Configure Networking         | Completed   |
-| Rename Server                | Pending     |
-| Install Updates              | Pending     |
-| Install AD DS                | Pending     |
-| Install DNS                  | Pending     |
-| Promote to Domain Controller | Pending     |
+| Rename Server                | Completed   |
+| Install Updates              | Completed   |
+| Install AD DS                | Completed   |
+| Install DNS                  | Completed   |
+| Promote to Domain Controller | Completed   |
 | Validate AD DS               | Pending     |
 | Validate DNS                 | Pending     |
 | Document Deployment          | In Progress |
