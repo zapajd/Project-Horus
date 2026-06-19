@@ -341,11 +341,35 @@ Checks:
 * SYSVOL present
 * NETLOGON share present
 
+---
+
+## Screenshot
+
+<p align="center">
+  <img src="Screenshots/12-Domain-Controllers-OU.png" width="600">
+</p>
+
+<p align="center">
+  <em>Figure 8: Active Directory Users and Computers opens successfully. Domain Controlelrs OU present.
+
+</em>
+</p>
+
+<p align="center">
+  <img src="Screenshots/12-Domain-Controllers-OU.png" width="600">
+</p>
+
+<p align="center">
+  <em>Figure 9: SYSVOL and NETLOG share present.
+
+</em>
+</p>
+
+---
+
 Status:
 
-```text
-Pending
-```
+```Completed```
 
 ---
 
@@ -357,11 +381,43 @@ Checks:
 * SRV records present
 * Host records created
 
+## Screenshot
+
+<p align="center">
+  <img src="Screenshots/14-DNS-Forward-Zone.png" width="650">
+</p>
+
+<p align="center">
+  <em>Figure 10: Forward Lookup Zone successfully created.
+
+</em>
+</p>
+
+<p align="center">
+  <img src="Screenshots/15-SRV-Records.png" width="650">
+</p>
+
+<p align="center">
+  <em>Figure 11: SRV records present.
+
+</em>
+</p>
+
+<p align="center">
+  <img src="Screenshots/16-DC01-A-Record.png" width="650">
+</p>
+
+<p align="center">
+  <em>Figure 12: Host records successfully created.
+
+</em>
+</p>
+
+---
+
 Status:
 
-```text
-Pending
-```
+```Completed```
 
 ---
 
