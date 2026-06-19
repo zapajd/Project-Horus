@@ -435,7 +435,7 @@ Checks:
 ## Screenshots
 
 <p align="center">
-  <img src="Screenshots/17-Domain-Auth.png" width="650">
+  <img src="Screenshots/17-NLTEST-Domain-Authentication.png" width="650">
 </p>
 
 <p align="center">
@@ -445,7 +445,7 @@ Checks:
 </p>
 
 <p align="center">
-  <img src="Screenshots/18-krbtgt-Functioning.png" width="650">
+  <img src="Screenshots/18-Kerberos-Ticket-Validation.png" width="650">
 </p>
 
 <p align="center">
