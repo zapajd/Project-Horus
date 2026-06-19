@@ -31,7 +31,7 @@ The purpose is to provide a repeatable deployment record and demonstrate operati
 | Operating System | Windows Server 2022 Standard Evaluation (Desktop Experience) |
 | Domain           | corp.horustech.local         |
 | IP Address       | 192.168.10.10                |
-| Deployment Date  | 2026-06-14                   |
+| Deployment Date  | 2026-06-19                   |
 
 ---
 
@@ -47,9 +47,9 @@ The purpose is to provide a repeatable deployment record and demonstrate operati
 | Install AD DS                | Completed   |
 | Install DNS                  | Completed   |
 | Promote to Domain Controller | Completed   |
-| Validate AD DS               | Pending     |
-| Validate DNS                 | Pending     |
-| Document Deployment          | In Progress |
+| Validate AD DS               | Completed   |
+| Validate DNS                 | Completed   |
+| Document Deployment          | Completed   |
 
 ---
 
@@ -381,6 +381,8 @@ Checks:
 * SRV records present
 * Host records created
 
+---
+
 ## Screenshot
 
 <p align="center">
@@ -428,11 +430,33 @@ Checks:
 * Domain authentication successful
 * Kerberos functioning correctly
 
+---
+
+## Screenshots
+
+<p align="center">
+  <img src="Screenshots/17-Domain-Auth.png" width="650">
+</p>
+
+<p align="center">
+  <em>Figure 13: Proof of domain authentication.
+
+</em>
+</p>
+
+<p align="center">
+  <img src="Screenshots/18-krbtgt-Functioning.png" width="650">
+</p>
+
+<p align="center">
+  <em>Figure 14: Proof of Kerberos functioning properly.
+
+</em>
+</p>
+
 Status:
 
-```text
-Pending
-```
+```Completed```
 
 ---
 
@@ -443,30 +467,68 @@ Document deployment issues, troubleshooting steps, and resolutions.
 | Issue | Resolution |
 | ----- | ---------- |
 | DNS delegation warning during domain promotion  | Expected behavior in isolated lab environment. No action required. |
-| None  | N/A        |
+|Domain Controller registered multiple A records (192.168.10.10 and 192.168.70.129)  | Verified as expected due to dual-NIC configuration. Confirmed DNS registration matched active interfaces. |
+| nslookup initially displayed DNS timeout messages against IPv6 loopback (::1)  | DNS queries ultimately succeeded. Verified SRV records and DC discovery functionality using nslookup and nltest. |
+| nltest /sc_verify returned ERROR_NO_SUCH_DOMAIN on DC01  | Validated domain functionality using nltest /dsgetdc and Kerberos ticket verification. Determined issue was not impacting domain authentication. |
 ---
 
 # Lessons Learned
 
 Document observations and recommendations for future deployments.
 
-* Configure static networking installing Active Directories before installing Active Directory services.
-* Verify hostname and Windows updates prior to domaion promotion.
-* DNS delegation warnings are common in standalone lab deplouments and do not prvent successful promotion.
-* Capturing screenshots during each deployment phase simplifies documentation and porfolio development.
+* Configure static networking before promoting a server to a Domain Controller.
+* Verify hostname, IP configuration, and Windows updates prior to Active Directory deployment.
+* Active Directory promotion automatically creates and registers required DNS zones and SRV records.
+* DNS delegation warnings are common in isolated lab environments and do not prevent successful domain promotion.
+* Validate DNS functionality using both DNS Manager and command-line tools such as nslookup and nltest.
+* Kerberos authentication can be verified through klist and successful issuance of a krbtgt ticket.
+* Maintaining detailed screenshots throughout deployment greatly simplifies documentation, troubleshooting, and portfolio creation.
+* Post-deployment validation is critical to ensure Active Directory, DNS, and authentication services are functioning correctly before introducing additional workloads.
+
+---
+
+# Deployment Outcome
+
+DC01 was successfully deployed as the first Domain Controller for the
+corp.horustech.local Active Directory forest.
+
+The deployment included:
+
+- Windows Server 2022 installation
+- Static network configuration
+- Hostname standardization
+- Windows updates
+- Active Directory Domain Services installation
+- DNS installation and validation
+- Active Directory forest creation
+- Domain Controller promotion
+- Authentication validation
+- Kerberos validation
+
+Post-deployment testing confirmed successful operation of:
+
+- Active Directory
+- DNS
+- LDAP
+- Kerberos
+- SYSVOL
+- NETLOGON
+
+Status:
+
+```Completed```
+
+---
+
+# Final Snapshot 
+
+```DC01-Post-Deployment-Baseline```
 
 ---
 
 # Build Completion Status
 
-```85% Complete```
-
-Remaining Activities:
-
-* Validate SYSVOL and NETLOGON shares
-* Validate DNS records
-* Join workstation(s) to domain
-* Continue with security hardening and GPO deployment
+```100% Complete```
 
 ---
 
@@ -478,4 +540,9 @@ Project Horus Team
 
 # Last Updated
 
-2026-06-17
+* 2026-06-14
+* 2026-06-15
+* 2026-06-16
+* 2026-06-17
+* 2026-06-18
+* 2026-06-19
